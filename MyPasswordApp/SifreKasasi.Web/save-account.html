@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Şifre Kaydet - Şifre Kasası</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Şifre Kaydet</h1>
+
+      <form id="saveAccountForm">
+        <div>
+          <label for="siteName">Site Adı:</label>
+          <input type="text" id="siteName" required />
+        </div>
+        <div>
+          <label for="siteUsername">Site Kullanıcı Adı:</label>
+          <input type="text" id="siteUsername" required />
+        </div>
+        <div>
+          <label for="password">Şifre:</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit">Kaydet</button>
+      </form>
+
+      <p><a href="accounts.html">Şifrelerim</a></p>
+    </div>
+
+    <script src="js/save-account.js"></script>
+  </body>
+</html>
