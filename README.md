@@ -1,4 +1,5 @@
-![sifrekasasilogo4.png](https://github.com/billcocaster/SifreKasasi/blob/main/MyPasswordApp/SifreKasasi.Web/images/sifrekasasilogo4.png?raw=true)
+![image](https://github.com/user-attachments/assets/0e378815-af59-4dff-9c9e-fe04794ed108)
+
 # ŞifreKasası
 
 ŞifreKasası is a website where users can save the account information of the websites they are registered to, and perform delete and edit operations on these accounts.
@@ -57,7 +58,7 @@
    ```
 
 7. Open your browser and visit `http://localhost:port/`.
-## 👐Contribution
+## 👐 Contribution
 
 Contributions are welcome! To contribute:
 
@@ -68,7 +69,7 @@ Contributions are welcome! To contribute:
 5. Open a pull request.
 
 
-## 📥Contact
+## 📥 Contact
 
 If you have any questions, suggestions, or feedback, please feel free to reach out:
 
