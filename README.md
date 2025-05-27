@@ -11,6 +11,7 @@
 
 ## 📷 Screenshots
 ![SS1.png](https://github.com/billcocaster/SifreKasasi/blob/main/README/SS1.png?raw=true)
+![image](https://github.com/user-attachments/assets/c849f6eb-550f-4733-9d0b-cf02d826755b)
 ![SS4.png](https://github.com/billcocaster/SifreKasasi/blob/main/README/SS4.png?raw=true)
 ![temachange.gif](https://github.com/billcocaster/SifreKasasi/blob/main/README/temachange.gif?raw=true)
 ![SS5.png](https://github.com/billcocaster/SifreKasasi/blob/main/README/SS5.png?raw=true)
