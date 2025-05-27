@@ -10,3 +10,16 @@
 /Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/refint/SifreKasasi.Data.dll
 /Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.pdb
 /Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/ref/SifreKasasi.Data.dll
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/bin/Debug/net9.0/SifreKasasi.Data.deps.json
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/bin/Debug/net9.0/SifreKasasi.Data.dll
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/bin/Debug/net9.0/SifreKasasi.Data.pdb
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.csproj.AssemblyReference.cache
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.AssemblyInfoInputs.cache
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.AssemblyInfo.cs
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.csproj.CoreCompileInputs.cache
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.sourcelink.json
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.dll
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/refint/SifreKasasi.Data.dll
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/SifreKasasi.Data.pdb
+/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/obj/Debug/net9.0/ref/SifreKasasi.Data.dll

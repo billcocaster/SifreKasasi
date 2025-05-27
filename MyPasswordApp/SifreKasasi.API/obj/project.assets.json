@@ -3476,11 +3476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.API/SifreKasasi.API.csproj",
+      "projectUniqueName": "/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.API/SifreKasasi.API.csproj",
       "projectName": "SifreKasasi.API",
-      "projectPath": "/Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.API/SifreKasasi.API.csproj",
+      "projectPath": "/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.API/SifreKasasi.API.csproj",
       "packagesPath": "/Users/bilalozturk/.nuget/packages/",
-      "outputPath": "/Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.API/obj/",
+      "outputPath": "/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bilalozturk/.nuget/NuGet/NuGet.Config"
@@ -3496,8 +3496,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.Data/SifreKasasi.Data.csproj": {
-              "projectPath": "/Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.Data/SifreKasasi.Data.csproj"
+            "/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/SifreKasasi.Data.csproj": {
+              "projectPath": "/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.Data/SifreKasasi.Data.csproj"
             }
           }
         }

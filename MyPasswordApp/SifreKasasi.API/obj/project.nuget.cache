@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0gdlusAwg1g=",
+  "dgSpecHash": "OM//AA5xO+U=",
   "success": true,
-  "projectFilePath": "/Users/bilalozturk/PasswordMan/MyPasswordApp/SifreKasasi.API/SifreKasasi.API.csproj",
+  "projectFilePath": "/Users/bilalozturk/GitHub/SifreKasasi/MyPasswordApp/SifreKasasi.API/SifreKasasi.API.csproj",
   "expectedPackageFiles": [
     "/Users/bilalozturk/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/bilalozturk/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/9.0.5/microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
