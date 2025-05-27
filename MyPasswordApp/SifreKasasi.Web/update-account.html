@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Şifreyi Güncelle - Şifre Kasası</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Şifreyi Güncelle</h1>
+
+      <form id="updateAccountForm">
+        <input type="hidden" id="accountId" />
+        <div>
+          <label for="siteName">Site Adı:</label>
+          <input type="text" id="siteName" required />
+        </div>
+        <div>
+          <label for="siteUsername">Site Kullanıcı Adı:</label>
+          <input type="text" id="siteUsername" required />
+        </div>
+        <div>
+          <label for="password">Yeni Şifre:</label>
+          <input type="password" id="password" />
+          <small>Şifreyi değiştirmek istemiyorsanız boş bırakın.</small>
+        </div>
+        <button type="submit">Güncelle</button>
+      </form>
+
+      <p><a href="accounts.html">İptal</a></p>
+    </div>
+
+    <script src="js/update-account.js"></script>
+  </body>
+</html>

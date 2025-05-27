@@ -5,27 +5,34 @@ namespace SifreKasasi.API.Services
 {
     public class EncryptionService
     {
-        private readonly IConfiguration _configuration;
-        private readonly byte[] _key;
-        private readonly byte[] _iv;
+        // Configuration ve Key/IV alanlarını kaldırıyoruz
+        // private readonly IConfiguration _configuration;
+        // private readonly byte[] _key;
+        // private readonly byte[] _iv;
 
-        public EncryptionService(IConfiguration configuration)
+        public EncryptionService()
         {
-            _configuration = configuration;
-            // Anahtar ve IV'yi oluştur (gerçek uygulamada bunlar güvenli bir şekilde saklanmalı)
-            using var deriveBytes = new Rfc2898DeriveBytes(
-                _configuration["JwtSettings:SecretKey"]!,
-                new byte[] { 1, 2, 3, 4, 5, 6, 7, 8 }, // Salt
-                1000);
-            _key = deriveBytes.GetBytes(32); // 256-bit key
-            _iv = deriveBytes.GetBytes(16);  // 128-bit IV
+            // Yapıcı metod artık konfigürasyon almıyor
         }
 
-        public string Encrypt(string plainText)
+        private (byte[] key, byte[] iv) DeriveKeyAndIV(string userPasswordHash)
         {
+             using var deriveBytes = new Rfc2898DeriveBytes(
+                userPasswordHash, // Anahtar türetmek için kullanıcının hashlenmiş şifresi
+                new byte[] { 8, 7, 6, 5, 4, 3, 2, 1 }, // Farklı bir Salt kullanabiliriz veya aynı
+                10000); // Daha yüksek iterasyon sayısı daha güvenli olabilir
+            var key = deriveBytes.GetBytes(32); // 256-bit key
+            var iv = deriveBytes.GetBytes(16);  // 128-bit IV
+            return (key, iv);
+        }
+
+        public string Encrypt(string plainText, string userPasswordHash)
+        {
+            var (key, iv) = DeriveKeyAndIV(userPasswordHash);
+
             using var aes = Aes.Create();
-            aes.Key = _key;
-            aes.IV = _iv;
+            aes.Key = key;
+            aes.IV = iv;
 
             using var encryptor = aes.CreateEncryptor();
             using var msEncrypt = new MemoryStream();
@@ -38,11 +45,13 @@ namespace SifreKasasi.API.Services
             return Convert.ToBase64String(msEncrypt.ToArray());
         }
 
-        public string Decrypt(string cipherText)
+        public string Decrypt(string cipherText, string userPasswordHash)
         {
+             var (key, iv) = DeriveKeyAndIV(userPasswordHash);
+
             using var aes = Aes.Create();
-            aes.Key = _key;
-            aes.IV = _iv;
+            aes.Key = key;
+            aes.IV = iv;
 
             using var decryptor = aes.CreateDecryptor();
             using var msDecrypt = new MemoryStream(Convert.FromBase64String(cipherText));

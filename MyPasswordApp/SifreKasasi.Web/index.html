@@ -20,8 +20,18 @@
       </nav>
 
       <div id="content">
-        <!-- İçerik buraya yüklenecek -->
+        <h1>Sifre kasasına hosgeldiniz</h1>
+        <button id="logoutBtn">Çıkış Yap</button>
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("jwtToken");
+          window.location.href = "login.html";
+        });
+    </script>
   </body>
 </html>
