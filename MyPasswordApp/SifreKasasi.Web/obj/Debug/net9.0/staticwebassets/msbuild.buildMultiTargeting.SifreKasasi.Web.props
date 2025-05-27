@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/SifreKasasi.Web.props" />
+</Project>
