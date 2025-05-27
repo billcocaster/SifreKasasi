@@ -4,22 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Şifrelerim - Şifre Kasası</title>
+    <link rel="icon" type="image/png" href="images/authtake_logo.jpeg" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Şifrelerim</h1>
 
+      <div
+        class="accounts-header"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 18px;
+          gap: 10px;
+          flex-wrap: wrap;
+        "
+      >
+        <a href="index.html" class="main-btn">Ana Sayfa</a>
+        <a href="save-account.html" class="main-btn">+ Yeni Şifre Ekle</a>
+      </div>
+
       <div id="accountsList">
         <!-- Şifreler buraya listelenecek -->
         <p>Yükleniyor...</p>
       </div>
-
-      <p><a href="index.html">Ana Sayfa</a></p>
     </div>
-
-    <p><a href="save-account.html">Yeni Şifre Ekle</a></p>
 
     <script src="js/accounts.js"></script>
   </body>
 </html>
+
+<footer>
+  <p>© 2025 Şifre Kasası. Tüm hakları saklıdır. Bilal Öztürk</p>
+</footer>

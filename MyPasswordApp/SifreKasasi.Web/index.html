@@ -4,12 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Şifre Kasası</title>
+    <link rel="icon" type="image/png" href="images/authtake_logo.jpeg" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Şifre Kasası</h1>
-      <p>Güvenli şifrelerinizi yönetin.</p>
+      <div
+        class="logo-container"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+        "
+      >
+        <img
+          src="images/authtake.png"
+          alt="AuthTake Logo"
+          class="header-logo"
+        />
+      </div>
+      <p style="text-align: center; margin-bottom: 20px; color: #475569">
+        Şifrelerinizi ezberlemeyin, biz ezberleriz...
+      </p>
+      <p style="text-align: center; margin-bottom: 20px; font-style: italic">
+        Ezberler miyiz?
+      </p>
 
       <nav>
         <ul>
@@ -20,18 +42,52 @@
       </nav>
 
       <div id="content">
-        <h1>Sifre kasasına hosgeldiniz</h1>
         <button id="logoutBtn">Çıkış Yap</button>
       </div>
     </div>
 
     <script>
-      document
-        .getElementById("logoutBtn")
-        .addEventListener("click", function () {
-          localStorage.removeItem("jwtToken");
-          window.location.href = "login.html";
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        const token = localStorage.getItem("jwtToken");
+        const accountsLink = document.querySelector(
+          'nav ul li a[href="accounts.html"]'
+        ).parentElement; // li elementi
+        const logoutButton = document.getElementById("logoutBtn");
+
+        if (!token) {
+          // Token yoksa gizle
+          if (accountsLink) {
+            accountsLink.style.display = "none";
+          }
+          if (logoutButton) {
+            logoutButton.style.display = "none";
+          }
+        } else {
+          // Token varsa göster (login ve register gizlenebilir)
+          const registerLink = document.querySelector(
+            'nav ul li a[href="register.html"]'
+          ).parentElement;
+          const loginLink = document.querySelector(
+            'nav ul li a[href="login.html"]'
+          ).parentElement;
+          if (registerLink) {
+            registerLink.style.display = "none";
+          }
+          if (loginLink) {
+            loginLink.style.display = "none";
+          }
+        }
+
+        document
+          .getElementById("logoutBtn")
+          .addEventListener("click", function () {
+            localStorage.removeItem("jwtToken");
+            window.location.href = "login.html";
+          });
+      });
     </script>
+    <footer>
+      <p>© 2025 Şifre Kasası. Tüm hakları saklıdır - Bilal Öztürk</p>
+    </footer>
   </body>
 </html>

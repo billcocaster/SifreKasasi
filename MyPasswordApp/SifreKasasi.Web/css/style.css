@@ -1,79 +1,243 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f4 100%);
+  color: #222;
+  min-height: 100vh;
 }
 
 .container {
-  width: 80%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  max-width: 600px;
+  margin: 32px auto;
+  background: #fff;
+  padding: 32px 24px 24px 24px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 60, 120, 0.08), 0 1.5px 4px rgba(0, 0, 0, 0.04);
 }
 
 h1 {
-  color: #007bff;
+  color: #2563eb;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 20px;
+  display: inline-block;
+  margin: 0 14px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav ul li a:hover {
-  color: #007bff;
+  background: #e0e7ff;
+  color: #1e293b;
 }
 
 #content {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
 }
 
 form div {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 form label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
 }
 
 form input[type="text"],
 form input[type="password"],
 form input[type="email"] {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f8fafc;
+  transition: border 0.2s;
+  box-sizing: border-box;
 }
 
-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
+form input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+form button,
+#logoutBtn,
+.show-password,
+.update-account,
+.delete-account {
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  padding: 10px 18px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-top: 6px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.07);
+  transition: background 0.2s, transform 0.1s;
+  box-sizing: border-box;
 }
 
-form button:hover {
-  background-color: #0056b3;
+form button:hover,
+#logoutBtn:hover,
+.show-password:hover,
+.update-account:hover,
+.delete-account:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+ul {
+  padding: 0;
+}
+
+.account-info {
+  flex: 1 1 100%;
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+.account-info strong {
+  font-size: 18px;
+  color: #2563eb;
+}
+.account-username {
+  font-size: 15px;
+  color: #64748b;
+}
+.account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 2px;
+}
+.hide-password {
+  background: linear-gradient(90deg, #64748b 60%, #94a3b8 100%);
+  color: #fff;
+}
+.hide-password:hover {
+  background: linear-gradient(90deg, #334155 60%, #64748b 100%);
+}
+ul li {
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  padding: 18px 16px 12px 16px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  border: 1.5px solid #e0e7ff;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+ul li:hover {
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.13);
+  border: 1.5px solid #2563eb33;
+}
+.password-display {
+  margin-left: 0;
+  font-weight: 600;
+  color: #0ea5e9;
+  font-size: 16px;
+  background: #e0f2fe;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin-right: 8px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 12px 4px;
+  }
+  nav ul li {
+    margin: 0 6px;
+  }
+  .account-info {
+    font-size: 15px;
+  }
+  ul li {
+    padding: 10px 6px 8px 6px;
+  }
+  .password-display {
+    font-size: 14px;
+    padding: 2px 6px;
+  }
+}
+
+.main-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.09);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  margin-bottom: 0;
+}
+.main-btn:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.13);
+}
+
+.main-logo {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto 20px auto;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 14px;
+  width: 100%;
+  /* Ensure it's at the bottom */
+  position: relative;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.header-logo {
+  max-width: 180px; /* Boyutu artırdım */
+  height: auto;
 }

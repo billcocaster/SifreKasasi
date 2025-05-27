@@ -27,8 +27,8 @@ document
         // Token'ı yerel depolamada sakla
         localStorage.setItem("jwtToken", result.token);
         alert("Giriş başarılı!");
-        // Şifrelerim sayfasına yönlendir
-        window.location.href = "accounts.html";
+        // Ana sayfaya yönlendir
+        window.location.href = "index.html";
       } else {
         const error = await response.text();
         alert(`Giriş başarısız: ${error}`);

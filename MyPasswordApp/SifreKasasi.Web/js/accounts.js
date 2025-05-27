@@ -60,13 +60,24 @@ document.addEventListener("DOMContentLoaded", async () => {
         accounts.forEach((account) => {
           const li = document.createElement("li");
 
+          // Bilgi kısmı
           const accountInfo = document.createElement("div");
-          accountInfo.textContent = `Site: ${account.siteName}, Kullanıcı Adı: ${account.siteUsername}`;
+          accountInfo.className = "account-info";
+          accountInfo.innerHTML = `<strong>${account.siteName}</strong><br><span class='account-username'>Kullanıcı Adı: ${account.siteUsername}</span>`;
+
+          // Butonlar ve şifre alanı için bir alt satır
+          const actionsDiv = document.createElement("div");
+          actionsDiv.className = "account-actions";
 
           const showPasswordButton = document.createElement("button");
           showPasswordButton.textContent = "Şifreyi Göster";
           showPasswordButton.classList.add("show-password");
           showPasswordButton.setAttribute("data-account-id", account.id);
+
+          const hidePasswordButton = document.createElement("button");
+          hidePasswordButton.textContent = "Şifreyi Gizle";
+          hidePasswordButton.classList.add("hide-password");
+          hidePasswordButton.style.display = "none";
 
           const passwordDisplay = document.createElement("span");
           passwordDisplay.classList.add("password-display");
@@ -81,11 +92,14 @@ document.addEventListener("DOMContentLoaded", async () => {
           deleteButton.classList.add("delete-account");
           deleteButton.dataset.accountId = account.id;
 
+          actionsDiv.appendChild(showPasswordButton);
+          actionsDiv.appendChild(hidePasswordButton);
+          actionsDiv.appendChild(passwordDisplay);
+          actionsDiv.appendChild(updateButton);
+          actionsDiv.appendChild(deleteButton);
+
           li.appendChild(accountInfo);
-          li.appendChild(showPasswordButton);
-          li.appendChild(passwordDisplay);
-          li.appendChild(updateButton);
-          li.appendChild(deleteButton);
+          li.appendChild(actionsDiv);
           ul.appendChild(li);
         });
         accountsListDiv.appendChild(ul);
@@ -107,12 +121,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Tüm hesap listesine tıklama olayını ekle
   accountsListDiv.addEventListener("click", (event) => {
-    // Tıklanan elementin Şifreyi Göster butonu olup olmadığını kontrol et
     if (event.target.classList.contains("show-password")) {
       const accountId = event.target.getAttribute("data-account-id");
-      console.log("Şifreyi Göster butonuna tıklandı. Hesap ID:", accountId);
-      const passwordDisplayElement = event.target.nextElementSibling; // Butonun yanındaki span
-      showPassword(accountId, passwordDisplayElement);
+      const actionsDiv = event.target.parentElement;
+      const passwordDisplayElement =
+        actionsDiv.querySelector(".password-display");
+      const hidePasswordButton = actionsDiv.querySelector(".hide-password");
+      showPassword(accountId, passwordDisplayElement).then(() => {
+        event.target.style.display = "none";
+        hidePasswordButton.style.display = "inline-block";
+      });
+    } else if (event.target.classList.contains("hide-password")) {
+      const actionsDiv = event.target.parentElement;
+      const showPasswordButton = actionsDiv.querySelector(".show-password");
+      const passwordDisplayElement =
+        actionsDiv.querySelector(".password-display");
+      passwordDisplayElement.textContent = "";
+      event.target.style.display = "none";
+      showPasswordButton.style.display = "inline-block";
     } else if (event.target.classList.contains("update-account")) {
       const accountId = event.target.dataset.accountId;
       console.log("Güncelle butonuna tıklandı. Hesap ID:", accountId);
