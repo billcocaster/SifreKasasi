@@ -30,7 +30,7 @@
         Şifrelerinizi ezberlemeyin, biz ezberleriz...
       </p>
       <p style="text-align: center; margin-bottom: 20px; font-style: italic">
-        Ezberler miyiz?
+        <span class="typing-text">Ezberler miyiz?</span>
       </p>
 
       <nav>
@@ -45,6 +45,8 @@
         <button id="logoutBtn">Çıkış Yap</button>
       </div>
     </div>
+
+    <button id="themeToggle" aria-label="Tema Değiştir"></button>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -86,8 +88,17 @@
           });
       });
     </script>
+    <script src="js/theme.js"></script>
     <footer>
-      <p>© 2025 Şifre Kasası. Tüm hakları saklıdır - Bilal Öztürk</p>
+      <p>
+        © 2025 Şifre Kasası. Tüm hakları saklıdır -
+        <a
+          href="https://bilalozturk.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >bilalozturk.com</a
+        >
+      </p>
     </footer>
   </body>
 </html>
